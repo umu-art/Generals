@@ -1,0 +1,8 @@
+body {
+  /*position: fixed;*/
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+}
