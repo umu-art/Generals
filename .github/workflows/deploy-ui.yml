@@ -33,7 +33,7 @@ jobs:
 
       - name: Build g-api
         working-directory: ./g-api
-        run: chmod 777 ./build-client-api.sh && ./build-client-api.sh ./g-ui
+        run: chmod 777 ./build-client-api.sh && ./build-client-api.sh ../g-ui/client
 
       - name: Install g-ui deps
         working-directory: ./g-ui
