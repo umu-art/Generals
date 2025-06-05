@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: g-core
-          image: ghcr.io/umu-art/g-core:latest
+          image: ghcr.io/umu-art/g-core:master
           imagePullPolicy: Always
 
       imagePullSecrets:

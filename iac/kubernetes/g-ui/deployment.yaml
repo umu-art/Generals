@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: g-ui
-          image: ghcr.io/umu-art/g-ui:latest
+          image: ghcr.io/umu-art/g-ui:master
           imagePullPolicy: Always
 
       imagePullSecrets:
