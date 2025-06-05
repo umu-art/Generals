@@ -32,12 +32,15 @@ jobs:
           node-version: 21
 
       - name: Build g-api
+        working-directory: ./g-api
         run: chmod 777 ./build-client-api.sh && ./build-client-api.sh ./g-ui
 
       - name: Install g-ui deps
+        working-directory: ./g-ui
         run: npm install
 
       - name: Build g-ui
+        working-directory: ./g-ui
         run: npm run build
 
       - name: Build docker image
