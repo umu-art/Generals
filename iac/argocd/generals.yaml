@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: generals
+spec:
+  destination:
+    namespace: generals
+    server: https://kubernetes.default.svc
+  source:
+    path: iac/kubernetes
+    repoURL: git@github.com:umu-art/generals.git
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  project: generals
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

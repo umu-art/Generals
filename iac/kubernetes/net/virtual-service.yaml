@@ -1,0 +1,27 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: generals
+  namespace: generals
+spec:
+  hosts:
+    - "generals.umu-art.ru"
+  gateways:
+    - generals-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /backend
+      route:
+        - destination:
+            host: g-core
+            port:
+              number: 80
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: g-ui
+            port:
+              number: 80

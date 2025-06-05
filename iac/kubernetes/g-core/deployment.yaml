@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: g-core
+  namespace: generals
   labels:
     app: g-core
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: g-core
@@ -17,7 +18,11 @@ spec:
     spec:
       containers:
         - name: g-core
-          image: vikazeni/g-core:latest
+          image: ghcr.io/umu-art/g-core:latest
           imagePullPolicy: Always
+
+      imagePullSecrets:
+        - name: github-container-registry
+
       restartPolicy: Always
       

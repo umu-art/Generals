@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: g-ui
+  namespace: generals
   labels:
     app: g-ui
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
     type: RollingUpdate
   selector:
@@ -19,7 +20,11 @@ spec:
     spec:
       containers:
         - name: g-ui
-          image: vikazeni/g-ui:latest
+          image: ghcr.io/umu-art/g-ui:latest
           imagePullPolicy: Always
+
+      imagePullSecrets:
+        - name: github-container-registry
+
       restartPolicy: Always
 
