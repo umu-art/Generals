@@ -7,9 +7,9 @@ spec:
   parentRefs:
     - name: generals-gateway
       namespace: istio-system
-      sectionName: http-generals-umu-art-ru
+      sectionName: http-generals-kazenin-ru
   hostnames:
-    - "generals.umu-art.ru"
+    - "generals.kazenin.ru"
   rules:
     - filters:
         - type: RequestRedirect

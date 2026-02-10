@@ -7,9 +7,9 @@ spec:
   parentRefs:
     - name: generals-gateway
       namespace: istio-system
-      sectionName: https-generals-umu-art-ru
+      sectionName: https-generals-kazenin-ru
   hostnames:
-    - "generals.umu-art.ru"
+    - "generals.kazenin.ru"
   rules:
     - matches:
         - path:

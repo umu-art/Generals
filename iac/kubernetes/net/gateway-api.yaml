@@ -11,21 +11,21 @@ spec:
     - type: Hostname
       value: istio-ingressgateway.istio-system.svc.cluster.local
   listeners:
-    - name: http-generals-umu-art-ru
+    - name: http-generals-kazenin-ru
       port: 80
       protocol: HTTP
-      hostname: "generals.umu-art.ru"
+      hostname: "generals.kazenin.ru"
       allowedRoutes:
         namespaces:
           from: All
-    - name: https-generals-umu-art-ru
+    - name: https-generals-kazenin-ru
       port: 443
       protocol: HTTPS
-      hostname: "generals.umu-art.ru"
+      hostname: "generals.kazenin.ru"
       tls:
         mode: Terminate
         certificateRefs:
-          - name: generals-umu-art-ru-tls
+          - name: generals-kazenin-ru-tls
             namespace: istio-system
       allowedRoutes:
         namespaces:
