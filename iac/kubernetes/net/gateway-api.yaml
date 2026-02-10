@@ -11,14 +11,7 @@ spec:
     - type: Hostname
       value: istio-ingressgateway.istio-system.svc.cluster.local
   listeners:
-    - name: http-generals-kazenin-ru
-      port: 80
-      protocol: HTTP
-      hostname: "generals.kazenin.ru"
-      allowedRoutes:
-        namespaces:
-          from: All
-    - name: https-generals-kazenin-ru
+    - name: https
       port: 443
       protocol: HTTPS
       hostname: "generals.kazenin.ru"

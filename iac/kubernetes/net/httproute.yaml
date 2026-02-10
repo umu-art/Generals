@@ -6,10 +6,6 @@ metadata:
 spec:
   parentRefs:
     - name: generals-gateway
-      namespace: istio-system
-      sectionName: https-generals-kazenin-ru
-  hostnames:
-    - "generals.kazenin.ru"
   rules:
     - matches:
         - path:
@@ -17,7 +13,6 @@ spec:
             value: /backend
       backendRefs:
         - name: g-core
-          namespace: generals
           port: 80
     - matches:
         - path:
@@ -25,5 +20,4 @@ spec:
             value: /
       backendRefs:
         - name: g-ui
-          namespace: generals
           port: 80
